@@ -9,7 +9,7 @@
     <string name="type">Type: </string>
     <string name="brand">Brand: </string>
     <string name="no_found">Not Found</string>
-    <string name="error_message">Unable to fetch card details, try again</string>
+    <string name="error_message">Network error. Unable to fetch card details, try again.</string>
     <string name="success">Success</string>
-    <string name="no_match">No match for this card was found</string>
+    <string name="no_match">No match for this card was found.</string>
 </resources>
