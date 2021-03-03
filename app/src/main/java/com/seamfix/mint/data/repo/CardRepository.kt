@@ -1,6 +1,7 @@
 package com.seamfix.mint.data.repo
 
 import android.content.Context
+import com.seamfix.mint.R
 import com.seamfix.mint.data.source.remote.ApiClient
 import com.seamfix.mint.data.source.remote.Service
 import com.seamfix.mint.model.CardDetailsResponse
@@ -21,9 +22,13 @@ open class CardRepository @Inject constructor(var context: Context?) {
             val response = service?.getCardDetails(cardNumber) ?: return null
             if(response.code() == 200 && response.body() != null){ //response form server:
                 val  cardResponse = response.body() as CardDetailsResponse
+                cardResponse.verificationStatus = true
                 cardResponse
             }else{//We assume that this is a network error:
-                null
+                val  cardResponse = CardDetailsResponse()
+                cardResponse.verificationStatus = false
+                cardResponse.errorMessage = context?.getString(R.string.no_match)
+                cardResponse
             }
         } catch (e: Exception) {
             null

@@ -10,7 +10,9 @@ data class CardDetailsResponse(
 	val scheme: String? = null,
 	val prepaid: Boolean? = null,
 	val type: String? = null,
-	val brand: String? = null
+	val brand: String? = null,
+	var verificationStatus: Boolean? = null,
+	var errorMessage: String? = null
 )
 
 @Keep

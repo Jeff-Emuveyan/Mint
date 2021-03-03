@@ -59,10 +59,10 @@ class MainFragment : Fragment() {
     /*** Initiates the request for the details of the card ****/
     private suspend fun fetchCardDetails() {
         val result = viewModel.fetchCardDetails(editText.text.toString())
-        if(result == null){
-            setUpUIState(UIState.NO_RESULT)
-        }else{
+        if(result != null && result.verificationStatus == true){
             setUpUIState(UIState.RESULT_FOUND, result)
+        }else{
+            setUpUIState(UIState.NO_RESULT, errorMessage = result?.errorMessage)
         }
     }
 
