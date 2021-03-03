@@ -13,8 +13,7 @@ open class CardRepository @Inject constructor(var context: Context?) {
 
     open suspend fun fetchCardDetails(cardNumber: String): CardDetailsResponse? {
         return try {
-            val request = cardNumber.take(8) // get the first 8 digits
-            val response = service?.getCardDetails(request) ?: return null
+            val response = service?.getCardDetails(cardNumber) ?: return null
             if(response.code() == 200 && response.body() != null){ //response form server:
                 val  cardResponse = response.body() as CardDetailsResponse
                 cardResponse
