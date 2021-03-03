@@ -1,5 +1,8 @@
 package com.seamfix.mint.model
 
+import androidx.annotation.Keep
+
+@Keep
 data class CardDetailsResponse(
 	val number: Number? = null,
 	val country: Country? = null,
@@ -10,6 +13,7 @@ data class CardDetailsResponse(
 	val brand: String? = null
 )
 
+@Keep
 data class Country(
 	val emoji: String? = null,
 	val latitude: Int? = null,
@@ -20,6 +24,7 @@ data class Country(
 	val longitude: Int? = null
 )
 
+@Keep
 data class Bank(
 	val phone: String? = null,
 	val city: String? = null,
@@ -27,6 +32,7 @@ data class Bank(
 	val url: String? = null
 )
 
+@Keep
 data class Number(
 	val length: Int? = null,
 	val luhn: Boolean? = null
