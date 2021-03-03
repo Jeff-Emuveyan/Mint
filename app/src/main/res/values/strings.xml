@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mint</string>
+    <string name="process">Process</string>
+    <string name="enter_your_card_number">Enter your card number</string>
+    <string name="card_number">Card Number</string>
+    <string name="invalid_number_error">Enter a valid card number</string>
+    <string name="country">Country: </string>
+    <string name="bank">Bank: </string>
+    <string name="type">Type: </string>
+    <string name="brand">Brand: </string>
+    <string name="no_found">Not Found</string>
+    <string name="error_message">Unable to fetch card details, try again</string>
+    <string name="success">Success</string>
+</resources>
