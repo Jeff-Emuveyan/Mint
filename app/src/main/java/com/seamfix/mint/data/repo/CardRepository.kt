@@ -11,6 +11,11 @@ open class CardRepository @Inject constructor(var context: Context?) {
 
     var service: Service? = ApiClient.getClient(context)?.create(Service::class.java)
 
+
+    /*** This method makes the network request to fetch the user's card details.
+     * @param cardNumber: the user's full card number
+     * @return CardDetailsResponse if the operation was successful and null otherwise.
+     */
     open suspend fun fetchCardDetails(cardNumber: String): CardDetailsResponse? {
         return try {
             val response = service?.getCardDetails(cardNumber) ?: return null
