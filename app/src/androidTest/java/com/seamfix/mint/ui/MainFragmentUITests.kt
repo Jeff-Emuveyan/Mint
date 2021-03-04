@@ -1,8 +1,6 @@
 package com.seamfix.mint.ui
 
-import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.IdlingResource
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.typeText
@@ -11,26 +9,13 @@ import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
-import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.ActivityTestRule
-import com.jakewharton.espresso.OkHttp3IdlingResource
 import com.seamfix.mint.R
-import com.seamfix.mint.data.repo.CardRepository
-import com.seamfix.mint.data.source.remote.Service
 import com.seamfix.mint.ui.main.MainActivity
-import com.seamfix.mint.util.enqueueResponse
-import okhttp3.OkHttpClient
-import okhttp3.mockwebserver.MockWebServer
 import org.hamcrest.CoreMatchers.not
-import org.junit.After
-import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.scalars.ScalarsConverterFactory
-import java.util.concurrent.TimeUnit
 
 
 @RunWith(AndroidJUnit4::class)
@@ -70,7 +55,7 @@ class MainFragmentUITests {
 
     /*** This test checks proper error message is when network call fails */
     @Test
-    fun  showDisplayErrorView(){
+    fun  shouldDisplayErrorView(){
         activityRule.launchActivity(null)
 
         //close the  keyboard:
