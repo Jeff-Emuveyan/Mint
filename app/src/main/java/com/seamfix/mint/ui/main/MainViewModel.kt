@@ -12,6 +12,7 @@ class MainViewModel @ViewModelInject constructor(var cardRepository: CardReposit
      * @param number: the user's card number.
      * ***/
     fun validateCardNumber(number: String?): Boolean {
+        //We use pay stack card class to validate the card number:
         val card = Card(number, 0,0, "")
         return card.validNumber()
     }
