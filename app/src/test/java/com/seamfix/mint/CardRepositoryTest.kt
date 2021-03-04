@@ -22,11 +22,6 @@ class CardRepositoryTest {
     private val service: Service = mock()
     private val context: Context = mock()
 
-    @Before
-    fun setUp(){
-
-    }
-
     @Test
     fun `card details should be returned when response code is 200`() = runBlocking{
 
