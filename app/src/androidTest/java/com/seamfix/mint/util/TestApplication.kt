@@ -1,4 +1,6 @@
-package com.seamfix.mint
+package com.seamfix.mint.util
+
+import com.seamfix.mint.MainApplication
 
 class TestApplication: MainApplication() {
 

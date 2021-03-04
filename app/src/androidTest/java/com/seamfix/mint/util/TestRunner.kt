@@ -1,4 +1,4 @@
-package com.seamfix.mint
+package com.seamfix.mint.util
 
 import android.app.Application
 import android.content.Context

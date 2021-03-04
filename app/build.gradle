@@ -16,7 +16,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "com.seamfix.mint.TestRunner"
+        testInstrumentationRunner "com.seamfix.mint.util.TestRunner"
     }
 
     buildTypes {
